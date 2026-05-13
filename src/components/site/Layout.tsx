@@ -9,6 +9,7 @@ const nav = [
   { to: "/burnout", label: "Burnout" },
   { to: "/mood", label: "Mood" },
   { to: "/routine", label: "Routine" },
+  { to: "/wins", label: "Wins" },
   { to: "/about", label: "About" },
   { to: "/journal", label: "Reset Journal" },
 ] as const;
