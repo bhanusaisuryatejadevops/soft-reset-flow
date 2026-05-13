@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ToolsRouteImport } from './routes/tools'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as MoodRouteImport } from './routes/mood'
 import { Route as JournalRouteImport } from './routes/journal'
 import { Route as FocusRouteImport } from './routes/focus'
 import { Route as BurnoutRouteImport } from './routes/burnout'
@@ -25,6 +26,11 @@ const ToolsRoute = ToolsRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoodRoute = MoodRouteImport.update({
+  id: '/mood',
+  path: '/mood',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JournalRoute = JournalRouteImport.update({
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/burnout': typeof BurnoutRoute
   '/focus': typeof FocusRoute
   '/journal': typeof JournalRoute
+  '/mood': typeof MoodRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tools': typeof ToolsRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/burnout': typeof BurnoutRoute
   '/focus': typeof FocusRoute
   '/journal': typeof JournalRoute
+  '/mood': typeof MoodRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tools': typeof ToolsRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/burnout': typeof BurnoutRoute
   '/focus': typeof FocusRoute
   '/journal': typeof JournalRoute
+  '/mood': typeof MoodRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tools': typeof ToolsRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/burnout'
     | '/focus'
     | '/journal'
+    | '/mood'
     | '/sitemap.xml'
     | '/tools'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/burnout'
     | '/focus'
     | '/journal'
+    | '/mood'
     | '/sitemap.xml'
     | '/tools'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/burnout'
     | '/focus'
     | '/journal'
+    | '/mood'
     | '/sitemap.xml'
     | '/tools'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   BurnoutRoute: typeof BurnoutRoute
   FocusRoute: typeof FocusRoute
   JournalRoute: typeof JournalRoute
+  MoodRoute: typeof MoodRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ToolsRoute: typeof ToolsRoute
 }
@@ -135,6 +148,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mood': {
+      id: '/mood'
+      path: '/mood'
+      fullPath: '/mood'
+      preLoaderRoute: typeof MoodRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/journal': {
@@ -181,9 +201,20 @@ const rootRouteChildren: RootRouteChildren = {
   BurnoutRoute: BurnoutRoute,
   FocusRoute: FocusRoute,
   JournalRoute: JournalRoute,
+  MoodRoute: MoodRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ToolsRoute: ToolsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
