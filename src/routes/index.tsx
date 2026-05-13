@@ -18,12 +18,12 @@ export const Route = createFileRoute("/")({
 });
 
 const tools = [
-  { icon: Flame, title: "Burnout Checker", description: "a short, soft self-check to name what you're carrying.", tag: "2 min" },
-  { icon: Sparkles, title: "Tiny Reset Routine", description: "small achievable rituals matched to your energy today.", tag: "ritual" },
-  { icon: Timer, title: "Focus Timer", description: "a minimal pomodoro built for slow, gentle focus.", tag: "timer" },
-  { icon: HeartHandshake, title: "Mood Mirror", description: "track how you feel and notice the patterns underneath.", tag: "daily" },
-  { icon: Trophy, title: "Small Wins Tracker", description: "tiny achievements, quiet streaks, real momentum.", tag: "streaks" },
-  { icon: NotebookPen, title: "Reset Journal", description: "a calming space to write the things you don't say out loud.", tag: "journal" },
+  { icon: Flame, title: "Burnout Checker", description: "a short, soft self-check to name what you're carrying.", tag: "2 min", to: "/burnout" },
+  { icon: Sparkles, title: "Tiny Reset Routine", description: "small achievable rituals matched to your energy today.", tag: "ritual", to: "/routine" },
+  { icon: Timer, title: "Focus Timer", description: "a minimal pomodoro built for slow, gentle focus.", tag: "timer", to: "/focus" },
+  { icon: HeartHandshake, title: "Mood Mirror", description: "track how you feel and notice the patterns underneath.", tag: "daily", to: "/mood" },
+  { icon: Trophy, title: "Small Wins Tracker", description: "tiny achievements, quiet streaks, real momentum.", tag: "streaks", to: "/wins" },
+  { icon: NotebookPen, title: "Reset Journal", description: "a calming space to write the things you don't say out loud.", tag: "journal", to: "/journal" },
 ];
 
 function Home() {
