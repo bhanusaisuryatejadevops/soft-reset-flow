@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 const nav = [
   { to: "/", label: "Home" },
   { to: "/tools", label: "Tools" },
+  { to: "/focus", label: "Focus" },
   { to: "/about", label: "About" },
   { to: "/journal", label: "Reset Journal" },
 ] as const;
