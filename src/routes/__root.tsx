@@ -49,6 +49,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "p:domain_verify", content: "955e984ac0624a6648e9c5dde49caa04" },
       { title: "reset — quiet tools for rebuilding slowly" },
       { name: "description", content: "for the days you feel mentally exhausted. emotional productivity tools, calming routines, mood tracking, focus sessions, journaling, and gentle reset rituals." },
       { property: "og:title", content: "reset — quiet tools for rebuilding slowly" },
