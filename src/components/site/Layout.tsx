@@ -1,6 +1,21 @@
 import { Link, Outlet } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Facebook } from "lucide-react";
+
+const socials = [
+  { name: "Instagram", href: "https://www.instagram.com/soft_resetflow/", Icon: Instagram },
+  {
+    name: "Pinterest",
+    href: "https://in.pinterest.com/resetflow/",
+    Icon: (props: React.SVGProps<SVGSVGElement>) => (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <circle cx="12" cy="12" r="10" />
+        <path d="M8 20c.5-2 .9-3.6 1.3-5.2.2-.9 1.2-4.7 1.2-4.7-.3-.6-.4-1.4-.4-2 0-1.9 1.1-3.3 2.5-3.3 1.2 0 1.7.9 1.7 1.9 0 1.2-.7 2.9-1.1 4.5-.3 1.4.7 2.5 2 2.5 2.4 0 4.1-3.1 4.1-6.7 0-2.8-1.9-4.9-5.3-4.9-3.9 0-6.3 2.9-6.3 6.1 0 1.1.4 2.3 1 3 .1.1.1.2.1.4l-.4 1.5c0 .2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.8 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.4-.6-2.7-1.4l-.7 2.8c-.3 1-1 2.3-1.5 3.1 1.1.3 2.3.5 3.4.5z" />
+      </svg>
+    ),
+  },
+  { name: "Facebook", href: "https://www.facebook.com/softresetflow/", Icon: Facebook },
+] as const;
 
 const nav = [
   { to: "/", label: "Home" },
