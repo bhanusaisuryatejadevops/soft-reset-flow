@@ -179,9 +179,18 @@ export function SiteLayout() {
             </div>
           </div>
 
-          <div className="mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-            <p>© {new Date().getFullYear()} reset. take it slow.</p>
-            <p className="italic font-display">rebuilding slowly is still progress.</p>
+          <div className="mt-12 pt-6 border-t border-white/5 flex flex-col gap-4">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2 text-xs text-muted-foreground">
+              {legalNav.map((l) => (
+                <Link key={l.to} to={l.to} className="hover:text-foreground transition-colors lowercase">
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+              <p>© {new Date().getFullYear()} reset. take it slow.</p>
+              <p className="italic font-display">rebuilding slowly is still progress.</p>
+            </div>
           </div>
         </div>
       </footer>
