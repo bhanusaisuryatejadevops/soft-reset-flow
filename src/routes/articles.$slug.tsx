@@ -109,7 +109,7 @@ function ArticleView() {
         <div className="mt-20 pt-10 border-t border-white/5">
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">read next</p>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {related.map((r) => r && (
+            {related.map((r) => (
               <Link key={r.slug} to="/articles/$slug" params={{ slug: r.slug }} className="glass rounded-2xl p-5 hover:bg-white/[0.04] transition-colors">
                 <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">{r.topic}</p>
                 <h3 className="mt-2 font-display text-lg leading-snug">{r.title}</h3>
