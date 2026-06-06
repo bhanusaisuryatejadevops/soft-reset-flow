@@ -56,6 +56,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "reset — quiet tools for rebuilding slowly" },
       { property: "og:description", content: "for the days you feel mentally exhausted. emotional productivity tools, calming routines, mood tracking, focus sessions, journaling, and gentle reset rituals." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.resetflow.site/" },
+      { property: "og:site_name", content: "ResetFlow" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "reset — quiet tools for rebuilding slowly" },
       { name: "twitter:description", content: "for the days you feel mentally exhausted. emotional productivity tools, calming routines, mood tracking, focus sessions, journaling, and gentle reset rituals." },
