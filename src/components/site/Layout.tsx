@@ -20,8 +20,15 @@ const socials = [
 const nav = [
   { to: "/", label: "Home" },
   { to: "/tools", label: "Tools" },
+  { to: "/articles", label: "Journal" },
   { to: "/about", label: "About" },
-  { to: "/journal", label: "Reset Journal" },
+  { to: "/contact", label: "Contact" },
+] as const;
+
+const legalNav = [
+  { to: "/privacy", label: "Privacy" },
+  { to: "/terms", label: "Terms" },
+  { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteLayout() {
