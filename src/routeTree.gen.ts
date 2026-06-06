@@ -11,14 +11,19 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WinsRouteImport } from './routes/wins'
 import { Route as ToolsRouteImport } from './routes/tools'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RoutineRouteImport } from './routes/routine'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as MoodRouteImport } from './routes/mood'
 import { Route as JournalRouteImport } from './routes/journal'
 import { Route as FocusRouteImport } from './routes/focus'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BurnoutRouteImport } from './routes/burnout'
+import { Route as ArticlesRouteImport } from './routes/articles'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArticlesSlugRouteImport } from './routes/articles.$slug'
 
 const WinsRoute = WinsRouteImport.update({
   id: '/wins',
@@ -30,6 +35,11 @@ const ToolsRoute = ToolsRouteImport.update({
   path: '/tools',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -38,6 +48,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const RoutineRoute = RoutineRouteImport.update({
   id: '/routine',
   path: '/routine',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MoodRoute = MoodRouteImport.update({
@@ -55,9 +70,19 @@ const FocusRoute = FocusRouteImport.update({
   path: '/focus',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BurnoutRoute = BurnoutRouteImport.update({
   id: '/burnout',
   path: '/burnout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticlesRoute = ArticlesRouteImport.update({
+  id: '/articles',
+  path: '/articles',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -70,92 +95,131 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ArticlesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/articles': typeof ArticlesRouteWithChildren
   '/burnout': typeof BurnoutRoute
+  '/contact': typeof ContactRoute
   '/focus': typeof FocusRoute
   '/journal': typeof JournalRoute
   '/mood': typeof MoodRoute
+  '/privacy': typeof PrivacyRoute
   '/routine': typeof RoutineRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/tools': typeof ToolsRoute
   '/wins': typeof WinsRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/articles': typeof ArticlesRouteWithChildren
   '/burnout': typeof BurnoutRoute
+  '/contact': typeof ContactRoute
   '/focus': typeof FocusRoute
   '/journal': typeof JournalRoute
   '/mood': typeof MoodRoute
+  '/privacy': typeof PrivacyRoute
   '/routine': typeof RoutineRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/tools': typeof ToolsRoute
   '/wins': typeof WinsRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/articles': typeof ArticlesRouteWithChildren
   '/burnout': typeof BurnoutRoute
+  '/contact': typeof ContactRoute
   '/focus': typeof FocusRoute
   '/journal': typeof JournalRoute
   '/mood': typeof MoodRoute
+  '/privacy': typeof PrivacyRoute
   '/routine': typeof RoutineRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/tools': typeof ToolsRoute
   '/wins': typeof WinsRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/articles'
     | '/burnout'
+    | '/contact'
     | '/focus'
     | '/journal'
     | '/mood'
+    | '/privacy'
     | '/routine'
     | '/sitemap.xml'
+    | '/terms'
     | '/tools'
     | '/wins'
+    | '/articles/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/articles'
     | '/burnout'
+    | '/contact'
     | '/focus'
     | '/journal'
     | '/mood'
+    | '/privacy'
     | '/routine'
     | '/sitemap.xml'
+    | '/terms'
     | '/tools'
     | '/wins'
+    | '/articles/$slug'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/articles'
     | '/burnout'
+    | '/contact'
     | '/focus'
     | '/journal'
     | '/mood'
+    | '/privacy'
     | '/routine'
     | '/sitemap.xml'
+    | '/terms'
     | '/tools'
     | '/wins'
+    | '/articles/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ArticlesRoute: typeof ArticlesRouteWithChildren
   BurnoutRoute: typeof BurnoutRoute
+  ContactRoute: typeof ContactRoute
   FocusRoute: typeof FocusRoute
   JournalRoute: typeof JournalRoute
   MoodRoute: typeof MoodRoute
+  PrivacyRoute: typeof PrivacyRoute
   RoutineRoute: typeof RoutineRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermsRoute: typeof TermsRoute
   ToolsRoute: typeof ToolsRoute
   WinsRoute: typeof WinsRoute
 }
@@ -176,6 +240,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -188,6 +259,13 @@ declare module '@tanstack/react-router' {
       path: '/routine'
       fullPath: '/routine'
       preLoaderRoute: typeof RoutineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mood': {
@@ -211,11 +289,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FocusRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/burnout': {
       id: '/burnout'
       path: '/burnout'
       fullPath: '/burnout'
       preLoaderRoute: typeof BurnoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles': {
+      id: '/articles'
+      path: '/articles'
+      fullPath: '/articles'
+      preLoaderRoute: typeof ArticlesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -232,18 +324,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/articles/$slug': {
+      id: '/articles/$slug'
+      path: '/$slug'
+      fullPath: '/articles/$slug'
+      preLoaderRoute: typeof ArticlesSlugRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
   }
 }
+
+interface ArticlesRouteChildren {
+  ArticlesSlugRoute: typeof ArticlesSlugRoute
+}
+
+const ArticlesRouteChildren: ArticlesRouteChildren = {
+  ArticlesSlugRoute: ArticlesSlugRoute,
+}
+
+const ArticlesRouteWithChildren = ArticlesRoute._addFileChildren(
+  ArticlesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ArticlesRoute: ArticlesRouteWithChildren,
   BurnoutRoute: BurnoutRoute,
+  ContactRoute: ContactRoute,
   FocusRoute: FocusRoute,
   JournalRoute: JournalRoute,
   MoodRoute: MoodRoute,
+  PrivacyRoute: PrivacyRoute,
   RoutineRoute: RoutineRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermsRoute: TermsRoute,
   ToolsRoute: ToolsRoute,
   WinsRoute: WinsRoute,
 }
