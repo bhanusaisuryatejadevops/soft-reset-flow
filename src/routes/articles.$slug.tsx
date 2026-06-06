@@ -90,9 +90,7 @@ function renderParagraph(p: string, i: number) {
 
 function ArticleView() {
   const article = Route.useLoaderData();
-  const related = article.related
-    .map((s: string) => articles.find((a) => a.slug === s))
-    .filter((x): x is NonNullable<typeof x> => Boolean(x));
+  const related = articles.filter((a) => article.related.includes(a.slug));
 
   return (
     <article className="mx-auto max-w-2xl px-6 pt-20 pb-24">
