@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "deploy": "vite build && wrangler deploy --config dist/server/wrangler.json"
+    "deploy": "vite build && wrangler deploy",
+    "deploy:generated": "wrangler deploy --config dist/server/wrangler.json"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
