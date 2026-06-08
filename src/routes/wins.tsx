@@ -4,6 +4,8 @@ import { Sparkles, Plus, Check, Trash2, Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
+const BASE = "https://www.resetflow.site";
+
 export const Route = createFileRoute("/wins")({
   head: () => ({
     meta: [
@@ -19,7 +21,9 @@ export const Route = createFileRoute("/wins")({
         content:
           "track tiny achievements with a calming streak. no pressure, no productivity guilt.",
       },
+      { property: "og:url", content: `${BASE}/wins` },
     ],
+    links: [{ rel: "canonical", href: `${BASE}/wins` }],
   }),
   component: WinsPage,
 });

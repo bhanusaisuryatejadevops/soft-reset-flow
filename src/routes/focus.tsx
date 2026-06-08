@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Play, Pause, RotateCcw } from "lucide-react";
 
+const BASE = "https://www.resetflow.site";
+
 export const Route = createFileRoute("/focus")({
   head: () => ({
     meta: [
@@ -9,8 +11,9 @@ export const Route = createFileRoute("/focus")({
       { name: "description", content: "a 25 minute pomodoro timer for slow, gentle focus. minimal, calm, made for tired days." },
       { property: "og:title", content: "focus timer — reset" },
       { property: "og:description", content: "a calm 25 minute pomodoro for slow focus." },
+      { property: "og:url", content: `${BASE}/focus` },
     ],
-    links: [{ rel: "canonical", href: "/focus" }],
+    links: [{ rel: "canonical", href: `${BASE}/focus` }],
   }),
   component: FocusPage,
 });
