@@ -3,6 +3,8 @@ import { Flame, Sparkles, Timer, HeartHandshake, Trophy, NotebookPen } from "luc
 import { ToolCard } from "@/components/site/ToolCard";
 import { Waitlist } from "@/components/site/Waitlist";
 
+const BASE = "https://www.resetflow.site";
+
 export const Route = createFileRoute("/tools")({
   head: () => ({
     meta: [
@@ -10,8 +12,9 @@ export const Route = createFileRoute("/tools")({
       { name: "description", content: "a calm collection of emotional productivity tools: burnout checker, focus timer, mood mirror, tiny reset routines and more." },
       { property: "og:title", content: "tools — reset" },
       { property: "og:description", content: "a calm collection of emotional productivity tools." },
+      { property: "og:url", content: `${BASE}/tools` },
     ],
-    links: [{ rel: "canonical", href: "/tools" }],
+    links: [{ rel: "canonical", href: `${BASE}/tools` }],
   }),
   component: ToolsPage,
 });

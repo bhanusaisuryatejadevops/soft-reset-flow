@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Waitlist } from "@/components/site/Waitlist";
 
+const BASE = "https://www.resetflow.site";
+
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
@@ -8,8 +10,9 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "reset is a quiet space for emotionally overwhelmed minds. built slowly, with care, for the days you have nothing left." },
       { property: "og:title", content: "about — reset" },
       { property: "og:description", content: "a quiet space for emotionally overwhelmed minds." },
+      { property: "og:url", content: `${BASE}/about` },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: `${BASE}/about` }],
   }),
   component: About,
 });
