@@ -10,6 +10,8 @@ import {
   Sparkles,
 } from "lucide-react";
 
+const BASE = "https://www.resetflow.site";
+
 export const Route = createFileRoute("/mood")({
   head: () => ({
     meta: [
@@ -25,7 +27,9 @@ export const Route = createFileRoute("/mood")({
         content:
           "quiet emotional reflections for tired hearts. mood-based prompts and a private space to write.",
       },
+      { property: "og:url", content: `${BASE}/mood` },
     ],
+    links: [{ rel: "canonical", href: `${BASE}/mood` }],
   }),
   component: MoodPage,
 });

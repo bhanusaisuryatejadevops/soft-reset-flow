@@ -3,6 +3,8 @@ import { useMemo, useState } from "react";
 import { Sparkles, RefreshCw, Battery, Clock, HeartPulse, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const BASE = "https://www.resetflow.site";
+
 export const Route = createFileRoute("/routine")({
   head: () => ({
     meta: [
@@ -18,7 +20,9 @@ export const Route = createFileRoute("/routine")({
         content:
           "a quiet routine generator for low-energy days. tiny acts that still count.",
       },
+      { property: "og:url", content: `${BASE}/routine` },
     ],
+    links: [{ rel: "canonical", href: `${BASE}/routine` }],
   }),
   component: RoutinePage,
 });
