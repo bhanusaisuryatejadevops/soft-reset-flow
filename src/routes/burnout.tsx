@@ -3,6 +3,8 @@ import { useMemo, useState } from "react";
 import { Slider } from "@/components/ui/slider";
 import { ArrowLeft, ArrowRight, Sparkles, RotateCcw } from "lucide-react";
 
+const BASE = "https://www.resetflow.site";
+
 export const Route = createFileRoute("/burnout")({
   head: () => ({
     meta: [
@@ -18,7 +20,9 @@ export const Route = createFileRoute("/burnout")({
         content:
           "Quietly check in with yourself. Seven emotional questions, calming suggestions, no judgment.",
       },
+      { property: "og:url", content: `${BASE}/burnout` },
     ],
+    links: [{ rel: "canonical", href: `${BASE}/burnout` }],
   }),
   component: BurnoutPage,
 });

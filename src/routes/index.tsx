@@ -3,6 +3,8 @@ import { Moon, Wind, Feather, Heart, Stars, Coffee } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import quoteImg from "@/assets/quote.jpg";
 
+const BASE = "https://www.resetflow.site";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -10,7 +12,9 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "a soft cinematic corner of the internet for the emotionally overwhelmed. calming visuals, gentle reflections, tiny rituals." },
       { property: "og:title", content: "reset — a quiet place for tired hearts" },
       { property: "og:description", content: "a soft place to return to when the world feels loud." },
+      { property: "og:url", content: `${BASE}/` },
     ],
+    links: [{ rel: "canonical", href: `${BASE}/` }],
   }),
   component: Home,
 });
