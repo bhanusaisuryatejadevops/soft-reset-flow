@@ -56,7 +56,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "reset — quiet tools for rebuilding slowly" },
       { property: "og:description", content: "for the days you feel mentally exhausted. emotional productivity tools, calming routines, mood tracking, focus sessions, journaling, and gentle reset rituals." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://www.resetflow.site/" },
+      { property: "og:url", content: "https://resetflow.site/" },
       { property: "og:site_name", content: "ResetFlow" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "reset — quiet tools for rebuilding slowly" },
@@ -67,6 +67,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       { src: "https://www.googletagmanager.com/gtag/js?id=G-LXQJB0NN3K", async: true },
       { children: "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-LXQJB0NN3K');" },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "ResetFlow",
+          url: "https://resetflow.site/",
+        }),
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
