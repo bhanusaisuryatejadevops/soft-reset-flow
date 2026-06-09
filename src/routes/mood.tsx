@@ -10,7 +10,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const BASE = "https://www.resetflow.site";
+const BASE = "https://resetflow.site";
 
 export const Route = createFileRoute("/mood")({
   head: () => ({

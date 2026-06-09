@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Instagram, Facebook, Mail } from "lucide-react";
 
-const BASE = "https://www.resetflow.site";
+const BASE = "https://resetflow.site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

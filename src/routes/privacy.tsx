@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const BASE = "https://www.resetflow.site";
+const BASE = "https://resetflow.site";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({

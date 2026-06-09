@@ -3,7 +3,7 @@ import { Moon, Wind, Feather, Heart, Stars, Coffee } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import quoteImg from "@/assets/quote.jpg";
 
-const BASE = "https://www.resetflow.site";
+const BASE = "https://resetflow.site";
 
 export const Route = createFileRoute("/")({
   head: () => ({

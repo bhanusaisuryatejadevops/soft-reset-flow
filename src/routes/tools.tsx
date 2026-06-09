@@ -3,7 +3,7 @@ import { Flame, Sparkles, Timer, HeartHandshake, Trophy, NotebookPen } from "luc
 import { ToolCard } from "@/components/site/ToolCard";
 import { Waitlist } from "@/components/site/Waitlist";
 
-const BASE = "https://www.resetflow.site";
+const BASE = "https://resetflow.site";
 
 export const Route = createFileRoute("/tools")({
   head: () => ({

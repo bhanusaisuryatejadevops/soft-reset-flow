@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Sparkles, RefreshCw, Battery, Clock, HeartPulse, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const BASE = "https://www.resetflow.site";
+const BASE = "https://resetflow.site";
 
 export const Route = createFileRoute("/routine")({
   head: () => ({

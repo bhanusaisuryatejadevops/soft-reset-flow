@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Slider } from "@/components/ui/slider";
 import { ArrowLeft, ArrowRight, Sparkles, RotateCcw } from "lucide-react";
 
-const BASE = "https://www.resetflow.site";
+const BASE = "https://resetflow.site";
 
 export const Route = createFileRoute("/burnout")({
   head: () => ({
