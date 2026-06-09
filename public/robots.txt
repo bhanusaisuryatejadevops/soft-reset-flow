@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.resetflow.site/sitemap.xml
+Sitemap: https://resetflow.site/sitemap.xml

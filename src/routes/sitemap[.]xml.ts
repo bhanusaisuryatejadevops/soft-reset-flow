@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { articles } from "@/data/articles";
 
-const BASE_URL = "https://www.resetflow.site";
+const BASE_URL = "https://resetflow.site";
 
 interface Entry { path: string; priority?: string; changefreq?: string; lastmod?: string; }
 
