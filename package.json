@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "deploy": "vite build && wrangler deploy --config wrangler.jsonc",
-    "deploy:generated": "wrangler deploy --config dist/server/wrangler.json"
+    "deploy:generated": "vite build && wrangler deploy --config wrangler.jsonc"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
