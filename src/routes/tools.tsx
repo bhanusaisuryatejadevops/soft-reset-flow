@@ -20,11 +20,16 @@ export const Route = createFileRoute("/tools")({
 });
 
 const tools = [
-  { icon: Flame, title: "Burnout Checker", description: "a short, soft self-check to name what you're carrying.", tag: "2 min", to: "/burnout" },
-  { icon: Sparkles, title: "Tiny Reset Routine", description: "small achievable rituals matched to your energy today.", tag: "ritual", to: "/routine" },
+  { icon: Flame, title: "Burnout Assessment", description: "check your burnout level with a quick self-assessment.", tag: "3 min", to: "/burnout" },
+
+  { icon: Sparkles, title: "Daily Reset Generator", description: "get one small action to reset your day.", tag: "instant", to: "/daily-reset" },
+
+  { icon: HeartHandshake, title: "Mood Check-In", description: "track your emotions and get a gentle recommendation.", tag: "daily", to: "/mood-check" },
+
   { icon: Timer, title: "Focus Timer", description: "a minimal pomodoro built for slow, gentle focus.", tag: "timer", to: "/focus" },
-  { icon: HeartHandshake, title: "Mood Mirror", description: "track how you feel and notice the patterns underneath.", tag: "daily", to: "/mood" },
+
   { icon: Trophy, title: "Small Wins Tracker", description: "tiny achievements, quiet streaks, real momentum.", tag: "streaks", to: "/wins" },
+
   { icon: NotebookPen, title: "Reset Journal", description: "a calming space to write the things you don't say out loud.", tag: "journal", to: "/journal" },
 ];
 
