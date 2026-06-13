@@ -457,6 +457,105 @@ export const articles: Article[] = [
     ],
     ["nervous-system-regulation", "why-rest-feels-unproductive", "the-hidden-signs-of-burnout"],
   ),
+  a(
+  "high-functioning-burnout",
+  "high functioning burnout: when success hides exhaustion",
+  "You look productive from the outside, but inside you're exhausted. Here's how to recognize high-functioning burnout.",
+  "burnout",
+  [
+  "High-functioning burnout is one of the hardest forms of burnout to notice because life still appears to be working.",
+  "You meet deadlines, answer messages, attend meetings, and keep responsibilities moving.",
+  "But internally, everything feels heavier than it should.",
+  "Many people mistake this for laziness, lack of motivation, or simply getting older.",
+  "In reality, it is often a nervous system carrying too much stress for too long.",
+  "Common signs include constant exhaustion, irritability, emotional numbness, poor sleep, and losing interest in things that once felt meaningful.",
+  "The danger is that external success hides internal depletion.",
+  "Recovery begins with honesty. Stop measuring your health only by your productivity.",
+  "Protect sleep, reduce unnecessary commitments, and create regular recovery time.",
+  "Burnout recovery is not weakness. It is maintenance for a human nervous system."
+  ],
+  ["burnout-recovery-gentle-guide","emotional-exhaustion"]
+  ),
+  
+  a(
+  "digital-detox-overwhelmed-minds",
+  "digital detox for overwhelmed minds",
+  "A practical guide to reducing digital overload and creating more mental space.",
+  "digital wellbeing",
+  [
+  "Modern life floods the brain with information.",
+  "Notifications, news, social media, and endless content compete for attention every hour.",
+  "The result is often mental fatigue rather than meaningful connection.",
+  "A digital detox does not require deleting everything.",
+  "Start by turning off non-essential notifications.",
+  "Create phone-free spaces such as the bedroom or dining table.",
+  "Schedule short periods each day without screens.",
+  "Replace some scrolling time with walking, reading, or simple rest.",
+  "The goal is not perfection but reducing unnecessary noise.",
+  "A calmer digital environment creates room for deeper thinking and genuine recovery."
+  ],
+  ["mental-reset-routines","mindfulness-habits"]
+  ),
+  
+  a(
+  "sunday-reset-routine",
+  "a sunday reset routine for a calmer week",
+  "A simple Sunday routine that reduces stress and helps you start the week with clarity.",
+  "weekly reset",
+  [
+  "Many people begin Monday already exhausted.",
+  "A short Sunday reset can make the entire week feel more manageable.",
+  "Spend ten minutes reviewing upcoming commitments.",
+  "Choose your three most important priorities for the week.",
+  "Prepare simple meals or groceries if possible.",
+  "Tidy the spaces you use most often.",
+  "Take a slow walk without your phone.",
+  "Go to bed slightly earlier than usual.",
+  "The purpose is not optimization.",
+  "The purpose is reducing friction so the week begins with calm rather than chaos."
+  ],
+  ["healthy-daily-routines","overwhelm-recovery"]
+  ),
+  
+  a(
+  "journaling-for-anxiety",
+  "journaling for anxiety: getting thoughts out of your head",
+  "A simple journaling practice that helps reduce mental overload and anxious thinking.",
+  "anxiety",
+  [
+  "Anxiety often grows louder when thoughts remain trapped in the mind.",
+  "Writing creates distance between you and the worry.",
+  "Start with a blank page and write exactly what is bothering you.",
+  "Do not edit or organize your thoughts.",
+  "Allow the page to hold what your mind has been carrying.",
+  "Many worries become easier to understand once they are visible.",
+  "Journaling does not solve every problem.",
+  "It helps reduce the mental effort required to keep replaying the same thoughts.",
+  "Five minutes a day is enough to start noticing benefits.",
+  "Consistency matters more than writing perfectly."
+  ],
+  ["mindfulness-habits","mental-reset-routines"]
+  ),
+  
+  a(
+  "signs-you-need-a-break",
+  "10 signs you need a break before burnout arrives",
+  "Recognize the warning signs early and recover before exhaustion becomes burnout.",
+  "recovery",
+  [
+  "Burnout rarely arrives without warning.",
+  "Most people experience early signs first.",
+  "You feel tired even after sleeping.",
+  "Small tasks feel unusually difficult.",
+  "You are more irritable than usual.",
+  "Things you once enjoyed feel flat.",
+  "You struggle to focus.",
+  "You constantly feel behind.",
+  "Your body feels tense most of the day.",
+  "You no longer feel excited about future plans.",
+  "Recognizing these signals early makes recovery much easier."
+  ],
+  ["the-hidden-signs-of-burnout","burnout-recovery-gentle-guide"]
+  )
 ];
-
 export const getArticle = (slug: string) => articles.find((x) => x.slug === slug);
