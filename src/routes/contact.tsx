@@ -18,7 +18,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const links = [
-  { label: "email", value: "hello@resetflow.site", href: "mailto:pbsaisuryateja@gmail.com", Icon: Mail },
+  { label: "email", value: "pbsaisuryateja@gmail.com", href: "mailto:pbsaisuryateja@gmail.com", Icon: Mail },
   { label: "instagram", value: "@soft_resetflow", href: "https://www.instagram.com/soft_resetflow/", Icon: Instagram },
   { label: "facebook", value: "softresetflow", href: "https://www.facebook.com/softresetflow/", Icon: Facebook },
 ] as const;
