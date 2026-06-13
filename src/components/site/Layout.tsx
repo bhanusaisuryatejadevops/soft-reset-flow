@@ -20,9 +20,10 @@ const socials = [
 const nav = [
   { to: "/", label: "Home" },
   { to: "/tools", label: "Tools" },
-  { to: "/articles", label: "Journal" },
+  { to: "/Journal", label: "Journal" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
+  { to: "/articles", label: "Articles" },
 ] as const;
 
 const legalNav = [
