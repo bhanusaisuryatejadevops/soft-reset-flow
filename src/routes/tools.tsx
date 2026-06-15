@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Flame, Sparkles, Timer, HeartHandshake, Trophy, NotebookPen } from "lucide-react";
 import { ToolCard } from "@/components/site/ToolCard";
 import { Waitlist } from "@/components/site/Waitlist";
+import { Quote } from "lucide-react";
 
 const BASE = "https://resetflow.site";
 
@@ -31,6 +32,13 @@ const tools = [
   { icon: Trophy, title: "Small Wins Tracker", description: "tiny achievements, quiet streaks, real momentum.", tag: "streaks", to: "/wins" },
 
   { icon: NotebookPen, title: "Reset Journal", description: "a calming space to write the things you don't say out loud.", tag: "journal", to: "/journal" },
+  {
+  icon: Quote,
+  title: "Daily Quote Generator",
+  description: "receive a gentle reminder whenever you need one.",
+  tag: "quotes",
+  to: "/quote"
+},
 ];
 
 function ToolsPage() {
